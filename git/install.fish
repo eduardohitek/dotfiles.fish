@@ -17,6 +17,9 @@ if command -qs delta
 	git config --global delta.decorations true
 end
 
+# default pull strategy
+git config pull.rebase false
+
 # use vscode as mergetool
 if command -qs code
 	git config --global merge.tool vscode
@@ -40,11 +43,13 @@ abbr -a gco 'git checkout'
 abbr -a gb 'git branch -v'
 abbr -a ga 'git add'
 abbr -a gaa 'git add -A'
-abbr -a gcm 'git commit -sm'
-abbr -a gcam 'git commit -sam'
+abbr -a gcm 'git commit -m'
+abbr -a gcam 'git commit -am'
 abbr -a gs 'git status -sb'
 abbr -a glnext 'git log --oneline (git describe --tags --abbrev=0 @^)..@'
 abbr -a gw 'git switch'
 abbr -a gm 'git switch (git main-branch)'
 abbr -a gms 'git switch (git main-branch); and git sync'
 abbr -a gwc 'git switch -c'
+abbr -a gru 'git remote update'
+abbr -a gfa 'git fetch --all'
