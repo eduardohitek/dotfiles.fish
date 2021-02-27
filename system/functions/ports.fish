@@ -2,6 +2,8 @@ function ports -d "manage processes by the ports they are using"
 	switch $argv[1]
 		case ls
 			lsof -i -n -P
+		case lsl
+			ports ls | rg LISTEN
 		case show
 			lsof -i :"$argv[2]" | tail -n 1
 		case pid
