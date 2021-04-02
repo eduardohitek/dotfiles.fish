@@ -13,7 +13,7 @@ case Darwin
 	if command -qs brew
 		brew tap -q homebrew/cask-fonts
 			and brew install --cask font-inconsolata
-			and brew install --cast font-fira-code
+			and brew install --cask font-fira-code
 	else
 		install ~/Library/Fonts
 	end
