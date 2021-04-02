@@ -194,7 +194,7 @@ echo ""
 echo "› Transmission:"
 echo "  › Use ~/Downloads/Incomplete to store incomplete downloads"
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "$HOME/Downloads/Incomplete"
+defaults write org.m0k.transmission IncompleteDownloadFolder -string "$HOME/Downloads/Torrents/Incomplete"
 
 echo "  › Don't prompt for confirmation before downloading"
 defaults write org.m0k.transmission DownloadAsk -bool false
@@ -209,13 +209,13 @@ echo "  › Hide the legal disclaimer"
 defaults write org.m0k.transmission WarningLegal -bool false
 
 echo "  › Auto-add .torrent files in ~/Downloads"
-defaults write org.m0k.transmission AutoImportDirectory -string "$HOME/Downloads"
+defaults write org.m0k.transmission AutoImportDirectory -string "$HOME/Downloads/Torrents"
 
 echo "  › Auto-resize the window to fit transfers"
 defaults write org.m0k.transmission AutoSize -bool true
 
 echo "  › Auto update to betas"
-defaults write org.m0k.transmission AutoUpdateBeta -bool true
+defaults write org.m0k.transmission AutoUpdateBeta -bool false
 
 echo "  › Set up the best block list"
 defaults write org.m0k.transmission EncryptionRequire -bool true
