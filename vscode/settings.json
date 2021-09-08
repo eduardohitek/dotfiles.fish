@@ -9,9 +9,7 @@
 	"editor.tabCompletion": "on",
 	"explorer.openEditors.visible": 0,
 	"window.restoreWindows": "none",
-	"terminal.external.osxExec": "iTerm.app",
 	"terminal.integrated.fontSize": 14,
-	//"files.autoSave": "onFocusChange",
 	"extensions.autoUpdate": true,
 	"editor.cursorBlinking": "phase",
 	"go.useLanguageServer": true,
@@ -52,42 +50,96 @@
 	"go.alternateTools": {
 		"go-langserver": "gopls"
 	},
-	"go.languageServerExperimentalFeatures": {
-		"format": true,
-		"autoComplete": true
-	},
 	"window.newWindowDimensions": "maximized",
 	"go.buildFlags": [
 		"-v"
 	],
-	"editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+	"go.delveConfig": {
+		"debugAdapter": "dlv-dap",
+	},
+	"editor.fontFamily": "'Inconsolata Regular', 'Fira Code', Menlo, Monaco, 'Courier New', monospace",
 	"editor.smoothScrolling": true,
 	"files.exclude": {
 		"yarn.lock": true
 	},
-	"terminal.integrated.shell.osx": "/usr/local/bin/fish",
 	"workbench.preferredDarkColorTheme": "Nord",
 	"files.insertFinalNewline": true,
-	"terminal.explorerKind": "external",
 	"editor.suggestSelection": "first",
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"vim.useCtrlKeys": false,
-	"editor.formatOnSave": true,
 	"editor.codeActionsOnSave": {},
 	"[json]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"vim.handleKeys": {
 		"<C-v>": false,
 		"<C-c>": false,
-		"<D-c>": false
-	},
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"<D-c>": false,
 	},
 	"merge-conflict.autoNavigateNextConflict.enabled": true,
 	"merge-conflict.diffViewPosition": "Below",
 	"[elixir]": {
 		"editor.defaultFormatter": "JakeBecker.elixir-ls"
-	}
+	},
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"u"
+			],
+			"after": [],
+			"commands": [
+				{
+					"command": "undo",
+					"args": []
+				}
+			]
+		},
+		{
+			"before": [
+				"<C-r>"
+			],
+			"after": [],
+			"commands": [
+				{
+					"command": "redo",
+					"args": []
+				}
+			]
+		}
+	],
+	"workbench.colorCustomizations": {
+		"[Nord]": {
+			"selection.background": "#ff0000",
+			"editor.selectionBackground": "#161515",
+			"list.activeSelectionForeground": "#000000",
+			"list.focusHighlightForeground": "#030000"
+		},
+		"[City Lights]": {
+			"selection.background": "#ff0000",
+			"editor.selectionBackground": "#161515",
+			"list.activeSelectionForeground": "#000000",
+			"list.focusHighlightForeground": "#030000"
+		}
+	},
+	"[javascript]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"editor.formatOnSave": false
+	},
+	"editor.formatOnSave": true,
+	"redhat.telemetry.enabled": false,
+	"go.toolsManagement.autoUpdate": true,
+	"terminal.integrated.tabs.enabled": true,
+	"go.addTags": {
+		"tags": "json,bson"
+	},
+	"mdb.confirmRunAll": false,
+	"editor.suggest.showStatusBar": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"security.workspace.trust.untrustedFiles": "open",
+	"[yaml]": {
+		"editor.formatOnSave": false
+	},
+	"window.zoomLevel": 0,
+	"editor.bracketPairColorization.enabled": true,
 }
