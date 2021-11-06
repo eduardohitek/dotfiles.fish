@@ -1,6 +1,6 @@
 <p align="center">
   <img alt="header image" src="https://raw.githubusercontent.com/caarlos0/dotfiles.fish/master/docs/header.svg" height="350" />
-  <h2 align="center">carlos' dotfiles</h2>
+  <h2 align="center">eduardohitek' dotfiles</h2>
   <p align="center">Config files for Fish, Java, Ruby, Go, Editors, Terminals and more.</p>
 </p>
 
@@ -46,7 +46,7 @@ First, make sure you have all those things installed:
 Then, run these steps:
 
 ```console
-$ git clone https://github.com/caarlos0/dotfiles.fish.git ~/.dotfiles
+$ git clone https://github.com/eduardohitek/dotfiles.fish.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ ./script/bootstrap.fish
 ```
