@@ -12,12 +12,15 @@ function docker -w docker
 end
 
 function _docker_start
-	if test -z (pgrep com.docker.hyperkit)
-		open -g -a Docker.app
-		while ! command docker stats --no-stream >/dev/null 2>&1
-			echo -n .
-			sleep 1
+	switch (uname)
+	case Darwin
+		if test (pgrep com.docker.driver | wc -l) -eq 0
+			open -g -j -a Docker.app
+			while ! command docker stats --no-stream >/dev/null 2>&1
+				echo -n .
+				sleep 1
+			end
+			echo
 		end
-		echo
 	end
 end
