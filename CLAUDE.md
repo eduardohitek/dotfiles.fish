@@ -4,12 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal Fish shell dotfiles (forked from caarlos0/dotfiles.fish). Expected to be cloned at `~/.dotfiles` — `00-dotfiles/install.fish` hardcodes `DOTFILES=~/.dotfiles`. There is no build, lint, or test suite.
+Personal Fish shell dotfiles (forked from caarlos0/dotfiles.fish). There is no build, lint, or test suite.
+
+**Layout on this machine:** the real clone is `~/dev/hitek/dotfiles.fish`, and `~/.dotfiles` is a symlink to it. `~/.dotfiles` is the stable path: `00-dotfiles/install.fish` hardcodes `DOTFILES=~/.dotfiles`, the bootstrap uses `$HOME/.dotfiles` as `DOTFILES_ROOT` (deliberately not resolved with `pwd -P`), and every symlink in `~` points through it. Edits in the repo take effect immediately — there is no second copy to sync. Never reintroduce a separate clone at `~/.dotfiles`.
+
+Private machine config stays out of this public repo: SSH hosts go in `~/.ssh/config.local`, fish secrets in `~/.localrc.fish`.
 
 ## Install / apply changes
 
 ```fish
-./script/bootstrap.fish   # idempotent; run from the repo root (uses $PWD as DOTFILES_ROOT)
+./script/bootstrap.fish   # idempotent; aborts if ~/.dotfiles doesn't exist
 ```
 
 To test a single topic, run its installer directly, e.g. `./git/install.fish`. After editing a function file, open a new shell (or `source` the file) to pick it up.

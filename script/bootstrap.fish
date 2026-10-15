@@ -2,7 +2,9 @@
 #
 # bootstrap installs things.
 
-set DOTFILES_ROOT (pwd -P)
+# ~/.dotfiles is the stable path used by symlinks and universal variables; it
+# may be the clone itself or a symlink to it, so it is not resolved with -P.
+set DOTFILES_ROOT $HOME/.dotfiles
 
 function info
 	echo [(set_color --bold) ' .. ' (set_color normal)] $argv
@@ -20,6 +22,10 @@ function abort
 	echo [(set_color --bold yellow) ABRT (set_color normal)] $argv
 	exit 1
 end
+
+test -d $DOTFILES_ROOT
+	or abort "$DOTFILES_ROOT not found: clone the repo there or symlink it to the clone"
+cd $DOTFILES_ROOT
 
 function on_exit -p %self
 	if not contains $argv[3] 0
