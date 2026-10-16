@@ -31,6 +31,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'luochen1990/rainbow'
 Plug 'hashivim/vim-terraform'
 Plug 'dag/vim-fish'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " git integration
 Plug 'tpope/vim-fugitive'
