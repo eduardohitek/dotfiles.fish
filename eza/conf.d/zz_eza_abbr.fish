@@ -1,4 +1,5 @@
-#!/usr/bin/env fish
+status is-interactive; or exit
+
 if command -qa eza
 	abbr -a ls 'eza'
 	abbr -a lg 'eza --git'
