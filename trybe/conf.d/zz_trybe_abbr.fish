@@ -1,4 +1,4 @@
-#!/usr/bin/env fish
+status is-interactive; or exit
 
 abbr -a tdb 'tsh db login --db-user teleport trybe-'
 abbr -a tlg 'tsh login --proxy teleport.betrybe.com'

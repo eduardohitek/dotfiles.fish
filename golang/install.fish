@@ -1,4 +1,3 @@
 #!/usr/bin/env fish
 set -Ux GOPATH $PROJECTS/Go
-set -Ua fish_user_paths $GOPATH/bin
-abbr -a gr 'go run .'
+fish_add_path $GOPATH/bin
